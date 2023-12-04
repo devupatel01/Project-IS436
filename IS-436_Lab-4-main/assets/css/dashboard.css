@@ -1,0 +1,158 @@
+.dashboardContainer {
+    font-family: 'Blinker', sans-serif;
+}
+
+.dashboardSubtitle {
+    font-size: 22px;
+    margin-left: 50px;
+}
+
+.healthCheckContainer {
+    background-color: #f7f7f7;
+    padding: 0;
+}
+
+.healthCheckItems {
+    padding: 30px 20px;
+}
+
+.healthCheckItem {
+    background-color: #FFF;
+    border: 1px solid #FFF;
+    border-radius: 10px;
+    padding: 15px;
+    text-align: center;
+    position: relative;
+    width: 210px;
+    height: auto;
+    min-height: 180px;
+    box-shadow: 1px 1px rgba(0, 3, 6, 0.1);
+    transition: border 0.5s;
+}
+
+.healthCheckA24Logo {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.healthCheckRefresh {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 10px;
+    transition: all 0.1s ease-in-out;
+    ;
+}
+
+.healthCheckRefresh:hover {
+    transform: scale(1.2);
+}
+
+.healthCheckTitle {
+    margin-bottom: 20px;
+    font-size: 40px;
+    font-weight: 700;
+    color: #666;
+}
+
+.healthCheckStatus {
+    /* font-size: 14px; */
+    font-weight: bold;
+}
+
+.healthCheckShowIcon {
+    animation: 0.5s ease-in-out 0s 1 iconAnimation;
+}
+
+.healthCheckSuccess {
+    border: 1px solid #00CF37;
+}
+
+.healthCheckSuccessMessage {
+    color: #00CF37;
+    font-size: 15px;
+    display: none;
+}
+
+.healthCheckInfoMessage {
+    font-size: 15px;
+    color: #dc582a;
+}
+
+.healthCheckFailure {
+    border: 1px solid #FF0000;
+}
+
+
+.healthCheckFailureMessage {
+    color: #FF0000;
+    font-size: 15px;
+    display: none;
+}
+
+.configValue {
+    color: #000;
+    font-weight: bold;
+}
+
+.serviceLogo img {
+    height: 80px;
+}
+
+/* Safari */
+@-webkit-keyframes loadSpin {
+    0% {
+        -webkit-transform: rotate(0deg);
+    }
+
+    100% {
+        -webkit-transform: rotate(360deg);
+    }
+}
+
+@keyframes loadSpin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+
+@keyframes iconAnimation {
+    0% {
+        transform: scale(1.3);
+    }
+
+    100% {
+        transform: scale(1.0);
+    }
+}
+
+@media (min-width:1350px) {
+    .healthCheckItems {
+        padding: 10px;
+        width: 83.333333%;
+        margin-left: 8.33333%;
+    }
+
+}
+
+@media (max-width: 767px) {
+    .healthCheckItem {
+        width: 300px;
+        height: 200px;
+    }
+
+    .serviceLogoSVG {
+        height: 110px;
+    }
+
+    .healthCheckA24Logo {
+        width: 95%;
+    }
+
+
+}

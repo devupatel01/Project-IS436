@@ -1,0 +1,141 @@
+.topNavigation {
+    display: none;
+    background-color: #3f4444;
+    height: 50px;
+    clear: both;
+    z-index: 10;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+.topNavigation .hamburger-inner,
+.hamburger-inner::before,
+.hamburger-inner::after {
+    background-color: #FFF;
+}
+
+.topNavigation .hamburger.is-active .hamburger-inner,
+.hamburger.is-active .hamburger-inner::before,
+.hamburger.is-active .hamburger-inner::after {
+    background-color: #FFF;
+}
+
+.topNavigation .hamburger-inner,
+.hamburger-inner::before,
+.hamburger-inner::after {
+    width: 35px;
+}
+
+.topNavigation .hamburger {
+    outline: none;
+}
+
+.topNavImg {
+    float: left;
+    max-height: 100%;
+    width: auto;
+    padding: 10px;
+    vertical-align: middle;
+    margin-left: 10px;
+    font-size: 20px;
+    text-decoration: none;
+    color: #FFF;
+}
+
+.topNavImg:hover {
+    text-decoration: none;
+    color: #FFF;
+}
+
+.topNavRightImgContainer {
+    text-align: center;
+    margin: 60px;
+    display: none !important;
+}
+
+.topNavRightImg {
+    margin: auto;
+    width: 100px;
+}
+
+.topNavIcon {
+    float: right;
+    display: none;
+    vertical-align: middle;
+    color: #fff;
+}
+
+.topNavIcon:hover {
+    color: #fff;
+}
+
+.topNavItem a {
+    color: #FFF;
+    transition: 0.2s;
+}
+
+.topNavItem a:hover {
+    color: #3f4444;
+}
+
+.topNavRight {
+    float: right;
+    width: auto;
+}
+
+.topNavWidth {
+    padding-left: 80px;
+    width: calc(100vw) !important;
+}
+
+.adminDashboardLeft {
+    right: calc(100vw) !important;
+}
+
+@media (max-width:1130px) {
+    .topNavigation {
+        display: block;
+    }
+}
+
+@media (max-width: 767px) {
+    .topNavRight {
+        height: 100%;
+        width: 0;
+        position: fixed;
+        z-index: 1;
+        top: 50px;
+        right: 0;
+        background-color: #3f4444;
+        overflow-x: hidden;
+        transition: all 0.3s;
+        margin: 0;
+    }
+
+    .topNavRight .nav>li>a,
+    .nav>li>a {
+        display: inline-block;
+    }
+
+    .topNavRight .nav>li>a:focus,
+    .nav>li>a:hover {
+        text-decoration: underline;
+        background-color: transparent;
+        color: #FFF;
+    }
+
+    .topNavIcon {
+        display: block;
+    }
+
+    .topNavItem {
+        font-size: 30px;
+        margin-top: 10px;
+    }
+
+    .topNavRightImgContainer {
+        display: block !important;
+    }
+}

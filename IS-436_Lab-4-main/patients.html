@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="shortcut icon" type="image/x-icon" href="/assets/favicon.png">
+    <link rel="stylesheet" href="assets/libraries/fontawesome/css/all.min.css" />
+    <link rel="stylesheet" href="assets/libraries/Bootstrap3.3.7/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/libraries/jqueryUI/jquery-ui.min.css" />
+    <link rel="stylesheet" type="text/css" href="assets/libraries/DataTables/css/datatables.min.css" />
+    <link rel="stylesheet" href="assets/libraries/hamburger.css">
+    <link href="https://fonts.googleapis.com/css?family=Blinker&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <!-- <link rel="stylesheet" href="assets/css/index.css" /> -->
+    <link rel="stylesheet" href="assets/css/topNavigation.css" />
+    <link rel="stylesheet" href="assets/css/sideNavigation.css" />
+    <link rel="stylesheet" href="assets/css/custom-table.css" />
+
+    <link rel="stylesheet" href="assets/css/patients.css">
+
+    <script type="text/javascript" src="assets/libraries/jquery2.2.3.min.js"></script>
+    <script type="text/javascript" src="assets/libraries/jqueryUI/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="assets/libraries/jquery3.4.1.min.js"></script>
+    <script type="text/javascript" src="assets/libraries/Bootstrap3.3.7/bootstrap.min.js"></script>
+
+</head>
+
+<body>
+
+    <div class="adminDashboard">
+
+        <!-- Top Navigation -->
+
+        <div class="topNavigation">
+            <a class="topNavImgContainer" href="dashboard.html">
+                <div class="topNavImg">Oozma Kappa</div>
+            </a>
+
+            <ul id="topNavList" class="topNavRight nav navbar-nav ml-auto">
+
+            </ul>
+
+            <button class="hamburger hamburger--squeeze topNavIcon" type="button" id="topNavBars">
+                <span class="hamburger-box">
+                    <span class="hamburger-inner"></span>
+                </span>
+            </button>
+
+        </div>
+
+
+        <!-- Side Navigation -->
+        <div class="sideNavigation">
+            <div class="sideNavigationContent">
+                <a href="dashboard.html" class="sideNavigationLogoAnchor">
+                    <span>Oozma Kappa</span>
+                </a>
+                <div id="sideNavList" class="sideNavigationItems">
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Main Body -->
+        <div class="main">
+            <div class="container-fluid mainContent">
+
+
+                <div class="row justify-content-center align-items-center">
+                    <div class="col-xs-12 titleContainer">
+                        <div class="title">
+                            <h2>
+                                Patients
+                            </h2>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- <div class="container">
+                    <div class="row">
+
+                        <div class="col-md-6">
+                            <div class="row">
+                                <form id="date-filter-form">
+                                    <div class='col-sm-4'>
+                                        <label>Start Date</label>
+                                        <div class="form-group">
+                                            <input type='date' class="form-control" id="startDate" />
+                                        </div>
+                                    </div>
+                                    <div class='col-sm-4'>
+                                        <label>End Date</label>
+                                        <div class="form-group">
+                                            <input type='date' class="form-control" id="endDate" />
+                                        </div>
+                                    </div>
+                                    <div class='col-sm-4' style="margin-top: 25px;">
+                                        <input type="submit" class="btn btn-success">
+                                        <input type="reset" class="btn btn-danger">
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6">
+                            <div class="row">
+                                <form id="field-search-form">
+                                    <div class='col-sm-4'>
+                                        <label>Select Field</label>
+                                        <div class="form-group">
+                                            <select class="form-control" id="select-field">
+                                                <option value=""> - SELECT FIELD - </option>
+                                                <option value="email">Email</option>
+                                                <option value="place">Place</option>
+                                                <option value="code">Code</option>
+                                                <option value="type">Type</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class='col-sm-4'>
+                                        <label id="lable-search">Search</label>
+                                        <div class="form-group" id="search-value-div">
+                                            <input type='input' class="form-control" id="search-value" />
+                                        </div>
+                                        <div class="form-group" id="search-place-div" style="display: none;">
+                                            <select class="form-control" id="search-place">
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class='col-sm-4' style="margin-top: 25px;">
+                                        <input type="submit" class="btn btn-success">
+                                        <input type="reset" class="btn btn-danger">
+                                    </div>
+                                </form>
+                            </div>
+
+                        </div>
+
+                        <div class="col-md-2">
+                            <label>Export</label>
+                            <button type="button" class="btn btn-success exportData">Export as CSV</button>
+                        </div>
+
+                        <div class="col-md-3">
+                            <label>Page per record</label>
+                            <select class="form-control" id="pagePerRecord">
+                                <option value="100">100</option>
+                                <option value="200">200</option>
+                                <option value="500">500</option>
+                                <option value="1000">1000</option>
+                            </select>
+                        </div>
+
+                        <div class="col-md-3" style="padding: 30px;">
+                            <label>Total Records: <span id="total-record-count"></span></label>
+                        </div>
+
+                    </div>
+                </div> -->
+
+
+
+                <div class="row justify-content-center align-items-center" style="height:100vh">
+                    <div class="col-md-3 addPatientSection">
+                        <button class="btn btn-md-2" data-toggle="modal" data-target="#addPatientModel">Add
+                            Patient</button>
+
+                    </div>
+                    <div class="col-xs-12" id="spinner">
+                        <div id="divLogs">
+                            <table id="logList" class="display styled-table" style="width:100%">
+                                <thead>
+                                    <tr>
+                                        <th>First Name</th>
+                                        <th>Last Name</th>
+                                        <th>Email</th>
+                                        <th>Mobile Number</th>
+                                        <th>Symptoms</th>
+                                        <th>Details</th>
+                                        <th>View</th>
+                                        <th>Appointment</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Gaurav</td>
+                                        <td>Mangukiya</td>
+                                        <td>gaurav@yopmail.com</td>
+                                        <td>1111111111</td>
+                                        <td>Heart Patient</td>
+                                        <td>Heart Patient</td>
+                                        <td><input type='button' class="btn btn-md-2 btn-primary" data-toggle="modal"
+                                                value='view' onclick='deleteRow()' /></td>
+                                        <td><input type='button' class="btn btn-md-2 btn-success" data-toggle="modal"
+                                                data-target="#addAppointmentsModel" value='appointment'
+                                                onclick='deleteRow()' /></td>
+                                    </tr>
+                                </tbody>
+                                <!-- <tbody>
+                                    <tr>
+                                        <td colspan="10" style="text-align: center;">No data found.</td>
+                                    </tr>
+                                </tbody> -->
+                            </table>
+                        </div>
+                        <!-- <div class="pagination">
+                            <button id="previous" class="btn">&laquo; Previous</button>
+                            <button id="next" class="btn">Next &raquo;</button>
+                        </div> -->
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- MODAL ADD PATIENT -->
+    <div id="addPatientModel" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <form id="addPatientSubmitForm">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h4 class="modal-title">Add Patients</h4>
+                    </div>
+                    <div class="modal-body updateModalBody">
+                        <div class="admin-form" id="divUserProfile">
+                            <div class="userInfo">
+                                <div class="updateUserFormContainer">
+                                    <div class="row">
+                                        <label for="first_name" class="col-sm-4 col-form-label">First Name:</label>
+                                        <div class="col-sm-8">
+                                            <input class="modalInput" type="text" name="first_name" id="ap_first_name"
+                                                value="" />
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <label for="last_name" class="col-sm-4 col-form-label">Last Name:</label>
+                                        <div class="col-sm-8">
+                                            <input class="modalInput" type="text" name="last_name" id="ap_last_name"
+                                                value="" />
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <label for="email" class="col-sm-4 col-form-label">Email:</label>
+                                        <div class="col-sm-8">
+                                            <input class="modalInput" type="text" name="email" id="ap_email" value="" />
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <label for="mobile_number" class="col-sm-4 col-form-label">Mobile
+                                            Number:</label>
+                                        <div class="col-sm-8">
+                                            <input class="modalInput" type="text" name="mobile_number"
+                                                id="ap_mobile_number" value="" />
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <label for="symptoms" class="col-sm-4 col-form-label">Symptoms:</label>
+                                        <div class="col-sm-8">
+                                            <textarea class="modalInput" name="symptoms" id="ap_symptoms"></textarea>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <label for="details" class="col-sm-4 col-form-label">Details:</label>
+                                        <div class="col-sm-8">
+                                            <textarea class="modalInput" name="details" id="ap_details"></textarea>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div id="patientFormInvalid" class="col-sm-8"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button id="addPatientSubmit" type="submit"
+                            class="btn btn-primary action-update">Update</button>
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div id="addAppointmentsModel" class="modal fade" role="dialog">
+        <div class="modal-dialog modal-sm">
+            <div class="modal-content">
+                <form id="addAppointmentsForm">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h4 class="modal-title">Add Appointment</h4>
+                    </div>
+                    <div class="modal-body updateModalBody">
+                        <div class="admin-form">
+                            <div class="userInfo">
+                                <div class="updateUserFormContainer">
+                                    <div class="row">
+                                        <label for="appointment_date" class="col-sm-4 col-form-label">Date:</label>
+                                        <div class="col-sm-8">
+                                            <input class="modalInput" type="hidden" name="patient_id"
+                                                id="aa_patient_id" />
+                                            <input class="modalInput" type="date" name="appointment_date"
+                                                id="aa_appointment_date" value="" required />
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <label for="appointment_time" class="col-sm-4 col-form-label">Time:</label>
+                                        <div class="col-sm-8">
+                                            <input class="modalInput" type="time" name="appointment_time"
+                                                id="aa_appointment_time" value="" required />
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <label for="details" class="col-sm-4 col-form-label">Details:</label>
+                                        <div class="col-sm-8">
+                                            <textarea class="modalInput" name="details" id="aa_details"></textarea>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div id="appointmentFormInvalid" class="col-sm-8"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button id="addAppointmentSubmit" type="submit" class="btn btn-primary action-update">Add
+                            Appointment</button>
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div id="showPatientDetails" class="modal fade" role="dialog">
+        <div class="modal-dialog modal-md">
+            <div class="modal-content">
+
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">Patient Details</h4>
+                </div>
+                <div class="modal-body updateModalBody">
+                    <div class="admin-form">
+                        <div class="userInfo">
+                            <div class="updateUserFormContainer">
+                                <div class="row">
+                                    <label class="col-sm-3 col-form-label">Name:</label>
+                                    <div class="col-sm-4" id="pd_div_name">Gaurav Mangukiya</div>
+                                </div>
+                                <div class="row">
+                                    <label class="col-sm-3 col-form-label">Email:</label>
+                                    <div class="col-sm-4" id="pd_div_email">Gaurav Mangukiya</div>
+                                </div>
+                                <div class="row">
+                                    <label class="col-sm-3 col-form-label">Mobile Number:</label>
+                                    <div class="col-sm-4" id="pd_div_mobile_number">Gaurav Mangukiya</div>
+                                    <!-- <div class="col-sm-6"></div> -->
+                                </div>
+                                <div class="row">
+                                    <label class="col-sm-3 col-form-label">Symptoms:</label>
+                                    <div class="col-sm-8" id="pd_div_symptoms">Symptoms</div>
+                                </div>
+                                <div class="row">
+                                    <label class="col-sm-3 col-form-label">Details:</label>
+                                    <div class="col-sm-8" id="pd_div_details">Details</div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-12">
+                                        <h3>Appointments</h3>
+                                        <table id="pdAppointmentsList" class="display styled-table"
+                                            style="width: 100%;">
+                                            <thead>
+                                                <tr>
+                                                    <th>Report Date</th>
+                                                    <th>Appointment Date</th>
+                                                    <th>Appintment Time</th>
+                                                    <th>Details</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>12-12-2023</td>
+                                                    <td>15-12-2023</td>
+                                                    <td>06:30</td>
+                                                    <td>Hello World</td>
+                                                </tr>
+                                            </tbody>
+                                            <!-- <tbody>
+                                                        <tr>
+                                                            <td colspan="4" style="text-align: center;">No data found.</td>
+                                                        </tr>
+                                                    </tbody> -->
+                                        </table>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+<script type="text/javascript" src="assets/javascript/lib.js"></script>
+<script type="text/javascript" src="assets/javascript/common.js"></script>
+<script type="text/javascript" src="assets/javascript/validation.js"></script>
+<script type="text/javascript" src="assets/javascript/header.js"></script>
+<script type="text/javascript" src="assets/javascript/footer.js"></script>
+<script type="text/javascript" src="assets/javascript/navigation.js"></script>
+<script type="text/javascript" src="assets/javascript/topNavigation.js"></script>
+<script type="text/javascript" src="assets/javascript/sideNavigation.js"></script>
+
+<script type="text/javascript" src="assets/javascript/patients.js"></script>
+
+</html>

@@ -1,0 +1,52 @@
+.sideNavigation {
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 200px;
+    background-color:#dc582a;
+    margin-right: 20px;
+    overflow-x: hidden;
+    z-index: 100;
+}
+
+.sideNavigationContent {
+    margin-top: 0px;
+}
+
+.sideNavigationItems {
+    margin-top: 40px;
+}
+
+.sideNavigation a {
+    padding: 20px 6px 6px 6px;
+    margin: 0 20px;
+    text-decoration: none;
+    font-size: 16px;
+    color: #FFFFFF;
+    display: block;
+}
+
+.sideNavigationContent .sideNavigationLogoAnchor {
+    padding: 20px 6px 6px 6px;
+    margin: 0 20px;
+    text-decoration: none;
+    font-size: 22px;
+    color: #000;
+    font-weight: 700;
+    display: block;
+}
+
+.sideNavListItems:hover {
+    color: #000;
+}
+
+.sideNavigationLogo {
+    width: 60px;
+}
+
+@media (max-width:1130px) {
+    .sideNavigation {
+        display: none;
+    }
+}

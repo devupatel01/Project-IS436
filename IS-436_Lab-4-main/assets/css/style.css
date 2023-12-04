@@ -1,0 +1,216 @@
+.adminDashboard {
+  position: relative;
+  display: flex;
+  right: 0;
+  -webkit-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+  overflow: auto;
+}
+
+.main {
+  margin-top: 40px;
+  margin-left: 200px;
+  min-width: 400px;
+  width: 100%;
+}
+
+.mainContent {
+  padding: 10px 20px;
+  max-width: 1200px;
+}
+
+.title {
+  text-align: center;
+  font-weight: 900;
+  font-size: 18px;
+}
+
+.title h2 {
+  font-weight: 700;
+  color: #3f4444;
+}
+
+.titleContainer {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.user-form .row,
+.config-form .row {
+  padding-bottom: 10px;
+}
+
+.user-form input,
+.user-form textarea,
+.config-form input,
+.config-form textarea {
+  width: 300px;
+}
+
+.user-form textarea,
+.config-form textarea {
+  height: 100px;
+}
+
+.centerText {
+  text-align: center;
+}
+
+.redText {
+  color: red;
+}
+
+.greenText {
+  color: green;
+}
+
+/*  *************************************************************************************  */
+/*  TABLE STYLING */
+/*  *************************************************************************************  */
+#userList_filter input,
+#logList_filter input,
+#placesList_filter input {
+  -webkit-appearance: button;
+  border: 1px solid #dddddd;
+  border-radius: 5px;
+  padding: 5px;
+}
+
+#userList_filter input:focus,
+#logList_filter input:focus,
+#placesList_filter input:focus {
+  outline: none;
+}
+
+.dataTableIcon {
+  color: #dc582a;
+}
+
+.actionIcon {
+  margin: 2px;
+}
+
+.activeTableItem {
+  cursor: pointer;
+  color: #dc582a;
+}
+
+.actionButton {
+  background: transparent;
+  border: none;
+  font-size: 20px;
+  border-radius: 5px;
+  color: #3f4444;
+}
+
+.actionButton:hover {
+  background-color: #dddddd;
+}
+
+.actionButton:focus {
+  background-color: #dddddd;
+  outline: none;
+}
+
+.actionDropdownItem {
+  display: block;
+  padding: 5px;
+  text-decoration: none;
+  color: #151515;
+}
+
+.actionDropdownItem:hover {
+  text-decoration: none;
+  color: #151515;
+  background-color: #dddddd;
+}
+
+.action-update {
+  background-color: #dc582a;
+  border: none;
+}
+
+/*  *************************************************************************************  */
+/*  MODAL STYLING */
+/*  *************************************************************************************  */
+
+.modalInput {
+  border: 1px solid #dddddd;
+  border-radius: 5px;
+  padding: 5px;
+}
+
+/*  *************************************************************************************  */
+/*  FORM STYLING */
+/*  *************************************************************************************  */
+
+.admin-form .row {
+  padding-bottom: 10px;
+}
+
+.admin-form input,
+.admin-form textarea {
+  width: 100%;
+}
+
+.admin-form textarea {
+  height: 100px;
+}
+
+.updateModalBody {
+  margin: 10px;
+}
+
+@media (max-width: 1130px) {
+  .main {
+    margin-left: 0;
+    margin-top: 60px;
+  }
+}
+
+.text-left {
+  text-align: left;
+}
+
+.radio-style input {
+  visibility: hidden;
+}
+
+.radio-style input[type="radio"]:checked + span {
+  color: #fff;
+  background-color: #204d74;
+  border-color: #122b40;
+}
+
+.jquery-spinner-wrap {
+  position: absolute;
+  top: 0;
+  z-index: 100;
+  width: 100%;
+  height: 100%;
+  display: none;
+  /* background: rgba(0, 0, 0, 0.6); */
+  background: transparent !important;
+}
+.jquery-spinner-circle {
+  height: 300px !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.jquery-spinner-bar {
+  width: 40px;
+  height: 40px;
+  border: 4px #ddd solid;
+  border-top: 4px #a40034 solid;
+  border-radius: 50%;
+  animation: sp-anime 0.8s infinite linear;
+}
+
+@keyframes sp-anime {
+  100% {
+    transform: rotate(360deg);
+  }
+}

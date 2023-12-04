@@ -1,0 +1,62 @@
+table.dataTable tbody td.select-checkbox:before,
+.dataTable tbody td.select-checkbox:after,
+table.dataTable tbody th.select-checkbox:before,
+table.dataTable tbody th.select-checkbox:after {
+    top: 50%;
+}
+
+.datetimepickerContainer {
+    padding-left: 0;
+}
+
+#logList_wrapper .dt-button {
+    background-color: #dc582a;
+    color: #FFF;
+    padding: 5px 10px;
+    border-radius: 10px;
+    border: none;
+    margin: 2px;
+    outline: none;
+    transition: all 0.25s;
+}
+
+#logList_wrapper .dt-button:hover {
+    background-color: #3f4444;
+}
+
+.addPatientSection {
+    float: right;
+}
+
+.addPatientSection button {
+    float: right;
+    text-decoration: none;
+    border: none;
+    background-color: #e05519;
+    color: white;
+}
+
+.addPatientSection button:hover {
+    background-color: #ff4d00;
+    color: white;
+}
+
+button.close {
+    background: #e05519;
+    opacity: 1;
+    color: #FFF;
+    height: 30px;
+    width: 30px;
+}
+
+#patientFormInvalid {
+    margin-bottom: 10px;
+    color: #dc582a;
+    display: none;
+}
+
+#appointmentFormInvalid {
+    margin-bottom: 10px;
+    color: #dc582a;
+    display: none;
+}

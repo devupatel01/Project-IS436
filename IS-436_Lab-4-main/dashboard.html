@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link rel="shortcut icon" type="image/x-icon" href="/assets/favicon.png">
+  <link rel="stylesheet" href="assets/libraries/fontawesome/css/all.min.css" />
+  <link rel="stylesheet" href="assets/libraries/Bootstrap3.3.7/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/libraries/jqueryUI/jquery-ui.min.css" />
+  <link rel="stylesheet" type="text/css" href="assets/libraries/DataTables/css/datatables.min.css" />
+  <link rel="stylesheet" href="assets/libraries/hamburger.css">
+  <link href="https://fonts.googleapis.com/css?family=Blinker&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <!-- <link rel="stylesheet" href="assets/css/index.css" /> -->
+  <link rel="stylesheet" href="assets/css/topNavigation.css" />
+  <link rel="stylesheet" href="assets/css/sideNavigation.css" />
+
+  <link rel="stylesheet" href="assets/css/dashboard.css">
+
+  <script type="text/javascript" src="assets/libraries/jquery2.2.3.min.js"></script>
+  <script type="text/javascript" src="assets/libraries/jqueryUI/jquery-ui.min.js"></script>
+  <script type="text/javascript" src="assets/libraries/jquery3.4.1.min.js"></script>
+  <script type="text/javascript" src="assets/libraries/Bootstrap3.3.7/bootstrap.min.js"></script>
+
+</head>
+
+<body>
+
+  <div class="adminDashboard">
+
+    <!-- Top Navigation -->
+
+    <div class="topNavigation">
+      <a class="topNavImgContainer" href="dashboard.html">
+        <div class="topNavImg">Oozma Kappa</div>
+      </a>
+
+      <ul id="topNavList" class="topNavRight nav navbar-nav ml-auto">
+
+      </ul>
+
+      <button class="hamburger hamburger--squeeze topNavIcon" type="button" id="topNavBars">
+        <span class="hamburger-box">
+          <span class="hamburger-inner"></span>
+        </span>
+      </button>
+
+    </div>
+
+
+    <!-- Side Navigation -->
+    <div class="sideNavigation">
+      <div class="sideNavigationContent">
+        <a href="dashboard.html" class="sideNavigationLogoAnchor">
+          <!-- <img class="sideNavigationLogo" src="assets/images/logo/ok_512px.png" alt=""> -->
+          <span>Oozma Kappa</span>
+        </a>
+        <div id="sideNavList" class="sideNavigationItems">
+        </div>
+      </div>
+    </div>
+
+
+
+    <!-- Dashboard Body -->
+
+    <div class="main container-fluid">
+      <div class="row justify-content-center align-items-center">
+        <div class="col-xs-12 titleContainer">
+          <div class="title">
+            <h2>
+              Dashboard
+              <span id="configVersion"></span>
+            </h2>
+          </div>
+        </div>
+      </div>
+
+      <div class="row justify-content-center align-items-center dashboardContainer" style="height:100vh">
+        <div class="col-xs-12 healthCheckContainer">
+          <div class="healthCheckItems col-xs-12 col-sm-12 col-sm-offset-0 col-md-12 col-md-offset-0">
+            <!-- AISLE24 SERVER -->
+
+            <!-- KISI -->
+            <div class="col-xs-12 col-sm-3 col-md-3 healthCheckItemContainer kisiCheckContainer" align="center">
+              <div class="healthCheckItem">
+                <div class="healthCheckItemText">
+                  <i id="kisiCheck" class="fas fa-sync-alt healthCheckRefresh"></i>
+                  <div class="serviceLogo serviceLogoSVG">
+                    <img src="assets/images/icons.png" />
+                    <h4 class="healthCheckStatus center">Patients</h4>
+                    <h2 class="healthCheckStatus" id="card-total-patient">0</h2>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- STRIPE -->
+            <div class="col-xs-12 col-sm-3 col-md-3 healthCheckItemContainer stripeCheckContainer" align="center">
+              <div class="healthCheckItem">
+                <div class="healthCheckItemText">
+                  <i id="stripeCheck" class="fas fa-sync-alt healthCheckRefresh"></i>
+                  <div class="serviceLogo serviceLogoSVG">
+                    <img src="assets/images/appointment.png" />
+                    <h4 class="healthCheckStatus center">Today's Appointments</h4>
+                    <h2 class="healthCheckStatus" id="card-total-today-appointment">2</h2>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+</body>
+
+<script type="text/javascript" src="assets/javascript/lib.js"></script>
+<script type="text/javascript" src="assets/javascript/common.js"></script>
+<script type="text/javascript" src="assets/javascript/header.js"></script>
+<script type="text/javascript" src="assets/javascript/footer.js"></script>
+<script type="text/javascript" src="assets/javascript/navigation.js"></script>
+<script type="text/javascript" src="assets/javascript/topNavigation.js"></script>
+<script type="text/javascript" src="assets/javascript/sideNavigation.js"></script>
+
+<script type="text/javascript" src="assets/javascript/dashboard.js"></script>
+
+</html>

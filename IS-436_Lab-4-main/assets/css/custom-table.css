@@ -1,0 +1,123 @@
+.styled-table {
+    border-collapse: collapse;
+    margin: 25px 0;
+    font-size: 0.9em;
+    font-family: sans-serif;
+    min-width: 400px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+
+
+.styled-table thead tr {
+    background-color: #3f4444;
+    color: #ffffff;
+    text-align: left;
+}
+
+.styled-table th,
+.styled-table td {
+    padding: 12px 15px;
+}
+
+.styled-table tbody tr {
+    border-bottom: 1px solid #dddddd;
+}
+
+.styled-table tbody tr:nth-of-type(even) {
+    background-color: #f3f3f3;
+}
+
+.styled-table tbody tr:last-of-type {
+    /* border-bottom: 2px solid #3f4444; */
+}
+
+.styled-table tbody tr.active-row {
+    font-weight: bold;
+    color: #3f4444;
+}
+
+.pagination {
+    display: inline-block;
+    padding-left: 0;
+    margin: 20px 0;
+    border-radius: 4px;
+    float: right;
+}
+
+.pagination button {
+    text-decoration: none;
+    display: inline-block;
+    padding: 8px 16px;
+    border: none;
+}
+
+.pagination button:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+.pagination #previous {
+    background-color: #f1f1f1;
+    color: black;
+}
+
+.pagination #next {
+    background-color: #e05519;
+    color: white;
+}
+
+.pagination .round {
+    border-radius: 50%;
+}
+
+table.styled-table thead .sort-table {
+    background-image: url('../assets/custom-datatable/sort_both.png');
+}
+
+table.styled-table thead .sort-asc {
+    background-image: url('../assets/custom-datatable/sort_asc.png') !important;
+}
+
+table.styled-table thead .sort-desc {
+    background-image: url('../assets/custom-datatable/sort_desc.png') !important;
+}
+
+table.styled-table thead .sort-table,
+table.styled-table thead .sort-asc,
+table.styled-table thead .sort-desc {
+    cursor: pointer;
+    background-repeat: no-repeat;
+    background-position: center right;
+}
+
+table.styled-table thead .sort-disable {
+    cursor: default;
+    pointer-events: none;
+    background-image: none;
+    /* background-repeat: no-repeat; */
+    /* background-position: center right; */
+}
+
+/* .jquery-spinner-wrap {	
+      position: absolute;
+      top: 0;
+      z-index: 100;
+      width: 100%;
+      height:100%;
+      display: none;
+      background: rgba(0,0,0,0.6);
+      .jquery-spinner-circle {
+          height: 100%;
+          display: flex;
+          justify-content: center;
+          align-items: center;  
+          .jquery-spinner-bar {
+              width: 40px;
+              height: 40px;
+              border: 4px #ddd solid;
+              border-top: 4px #a40034 solid;
+              border-radius: 50%;
+              animation: sp-anime 0.8s infinite linear;
+          }
+      }
+  } */
